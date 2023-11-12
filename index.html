@@ -1,11 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Johannes Pirlet | Frontend Developer</title>
 </head>
+
 <body>
-    <h1>Hello Du</h1>
+    <header id="top">
+
+        <div id="header_container">
+
+            <a href="./">LOGO</a>
+
+            <nav>
+                <ul id="menu">
+                    <li><a href="#about">about me</a></li>
+                    <li><a href="#work">projects</a></li>
+                    <li><a href="#contact">stay in touch</a></li>
+                </ul>
+
+                <div id="lang_container">
+                    <div></div>
+                </div>
+
+                <div id="burger">
+
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="sidemenu">
+                        <a href="#">
+                            <li>about me</li>
+                        </a>
+                        <a href="#">
+                            <li>work</li>
+                        </a>
+                        <a href="#">
+                            <li>contact</li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="intersec_container">
+                <h1>about</h1>
+                <p>Hier nur mal ein kurzer Abriss meiner Fähigkeiten im Umgang mit WebTechnologien und Erfahrungen im
+                    Bereich der Frontend Programmierung</p>
+            </div>
+            <div class="sec_container about_sec">
+                <div>
+                    <h2>Hey</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa earum adipisci maxime quidem iure
+                        quis quam deleniti illum blanditiis doloremque qui consectetur, error quibusdam reiciendis animi
+                        voluptatem. Sapiente, deleniti odio!Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Temporibus facere debitis perferendis, in quaerat maxime. Tempora vel nobis libero! Odio quos a
+                        neque voluptas nemo illo sit saepe cupiditate laborum.</p>
+                    <a class="btn" href="./#contact">Kontakt</a>
+                    <a class="btn" href="https://www.google-analytics.com/analytics.js" download="file">Download CV</a>
+                </div>
+                <div>
+                    <h2>Mein TechStack</h2>
+                    <div id="stack_wrapper">
+                        <div>HTML</div>
+                        <div>CSS</div>
+                        <div>JavaScript</div>
+                        <div>jQuery</div>
+                        <div>React</div>
+                        <div>SCSS</div>
+                        <div>Github</div>
+                        <div>GIT</div>
+                        <div>Responsive Design</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="work">
+            <div class="intersec_container">
+                <h1>work</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium, ipsum
+                    earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio molestias
+                    possimus, velit quidem nam!</p>
+            </div>
+            <div class="sec_container">
+                <h1>Heading 1</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium, ipsum
+                    earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio molestias
+                    possimus, velit quidem nam!</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="intersec_container">
+                <h1>contact</h1>
+                <p>Schreiben Sie mir gerne. Das nachfolgende Formular hilft Ihnen mich unmittelbar zu kontaktieren. Ich
+                    bin neugierig auf Ihre Ideen und antworte schnellstmöglich auf Ihr Kontaktgesucht. Bis bald!</p>
+            </div>
+            <div class="sec_container">
+                <form method="post" action="#">
+                    <label class="contact_form_label" for="name">Name</label>
+                    <input class="contact_form_input" type="name" placeholder="Ihr Name" id="name" required />
+                    <label class="contact_form_label" for="email">E-Mail</label>
+                    <input class="contact_form_input" type="email" placeholder="Ihre E-Mail" id="email" required />
+                    <label class="contact_form_label" for="message">Nachricht</label>
+                    <textarea class="contact_form_input" rows="10" name="message" placeholder="Und ihre Nachricht"
+                        id="message" required></textarea>
+                    <a type="submit" class="btn">Abschicken</a>
+                </form>
+            </div>
+        </section>
+        <a id="arrow_up" href="./#top">
+            <span></span>
+        </a>
+    </main>
+    <footer>
+        <div>
+            <div class="sm_menu footer_nav">
+                <a class="sm_footer_icon" href="" title="Connect with me on LinkedIn" target="_blank"></a>
+                <a class="sm_footer_icon" href="https://github.com/johannespirlet" title="Like Me on Facebook"
+                    target="_blank"></a>
+                <a class="sm_footer_icon"
+                    href="mailto:johannes-pirlet@gmx.de?subject=Eine%20kleine%20Nachricht&amp;body=Sehr%20geehrter%20Herr%20Pirlet,"
+                    title="Send me an E-Mail" target="_blank"></a>
+            </div>
+            <ul>
+                <li><a href="./#about">about me</a></li>
+                <li><a href="./#work">projects</a></li>
+                <li><a href="./#contact">stay in touch</a></li>
+            </ul>
+        </div>
+        <p>© Copyright 2023. Made by Johannes Pirlet</p>
+    </footer>
+
+    <div class="sm_menu fixed_nav">
+        <a class="sm_fixed_icon" href="" title="Connect with me on LinkedIn" target="_blank"></a>
+        <a class="sm_fixed_icon" href="https://github.com/johannespirlet" title="Follow me on Github"
+            target="_blank"></a>
+        <a class="sm_fixed_icon"
+            href="mailto:johannes-pirlet@gmx.de?subject=Eine%20kleine%20Nachricht&amp;body=Sehr%20geehrter%20Herr%20Pirlet,"
+            title="Send me an E-Mail" target="_blank"></a>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>

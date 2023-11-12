@@ -1,0 +1,210 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'main';
+@import 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: white;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+
+h1 {
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+h2 {
+    margin-left: 0.3rem;
+    margin-bottom: 1.2rem;
+    font-size: clamp(1.9rem, 2.3vw, 2.4rem);
+}
+
+p,
+a {
+    font-size: clamp(0.9rem, 1.3vw, 1.8rem);
+    font-weight: 400;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+}
+
+.sm_menu {
+
+    >.sm_footer_icon {
+        display: inline-block;
+        margin-inline: 0.6rem;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        opacity: 0.8;
+        @include socialLinks();
+        transform: scale(0.9);
+        transition: all .3s ease;
+      
+        &:hover {
+            transform: scale(1);
+        }
+    }
+
+    >.sm_fixed_icon {
+        display: block;
+        margin-block: 0.4rem;
+        width: min(3rem, 11vw);
+        height: min(3rem, 11vw);
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+        @include socialLinks();
+
+        &:hover {
+            transform: translateX(-10%);
+        }
+    }
+}
+
+.fixed_nav {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 30%;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.slide-in {
+    transform: translateX(3.5rem);
+}
+
+@media(max-width: 710px) {
+
+    #lang_container,
+    #menu {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+        z-index: 1;
+        position: relative;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #burger a {
+        transition: color 0.3s ease;
+    }
+
+    #burger a:hover {
+        color: tomato;
+    }
+
+
+    #burger input {
+        display: block;
+        width: 33px;
+        height: 22px;
+        position: fixed;
+
+        cursor: pointer;
+
+        opacity: 0;
+        z-index: 2;
+
+        -webkit-touch-callout: none;
+    }
+
+    #burger span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #333;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #burger span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #burger span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #burger input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+    }
+
+    #burger input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #burger input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #sidemenu {
+        position: absolute;
+        right: -3rem;
+        width: 250px;
+        height: 400px;
+        padding: 80px 30px 60px 10px;
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform: translateX(0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+        li {
+            padding: 1rem 0;
+            font-size: 22px;
+            text-align: right;
+        }
+    }
+
+    #burger input:checked~ul {
+        transform: translateX(-100%);
+    }
+
+    footer > div {
+        flex-direction: column;
+    }
+
+    .about_sec {
+        @include flexCenter($direction: column, $justify: center);
+    }
+}

@@ -1,0 +1,141 @@
+@import 'variables';
+@import 'mixins';
+
+main {
+
+    section {
+        padding: 2.3rem 0;
+    }
+
+    .sec_container {
+
+        margin-inline: auto;
+        width: min(83%, 55rem);
+
+    }
+
+    .about_sec {
+
+        display: flex;
+
+        > div {
+            padding: 1rem;
+        }
+
+        >:nth-child(1) {
+            flex-basis: 170%;
+        }
+
+        #stack_wrapper {
+
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+
+             > div {
+                padding: 0.4rem 0.6rem;
+                text-align: center;
+                font-weight: 600;
+                color: #666;
+                background: rgba(153,153,153,.2);
+                border-radius: 0.5rem;
+            }
+
+        }
+    }
+
+    .intersec_container {
+        text-align: center;
+        margin-inline: auto;
+        width: min(70%, 70.5rem);
+        padding: 4rem 0;
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 1.2rem 0.5rem;
+        padding: 0.5rem 0.8rem;
+        background-color: rgb(255, 99, 71, .9);
+        border-radius: 0.2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: center;
+        cursor: pointer;
+        color: inherit;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        transition: all 250ms;
+    }
+
+.btn:hover,
+.btn:focus {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  background-color: lightgrey;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+    .contact_form_input {
+        padding: 1rem;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    .contact_form_label, .contact_form_input + .btn, .contact_form_input {
+        display: block;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    #arrow_up {
+        display: block;
+        margin: 1rem auto;
+        height: 2rem;
+        width: 2rem;
+
+        span {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,70%) rotate(-45deg);
+            width: 1.2rem;
+            height: 1.2rem;
+            border-top: 0.3rem solid #333;
+            border-right: 0.3rem solid #333;
+            opacity: 0.9;
+        }
+
+    }
+
+    #arrow_up:hover span {
+        animation: animate 1.5s infinite;
+    }
+
+    @keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translate(-50%,110%) rotate(-45deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%,30%) rotate(-45deg);
+    }
+}
+
+}
