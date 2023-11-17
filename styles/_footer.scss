@@ -7,15 +7,18 @@ footer {
         width: 75%;
         padding: 2rem 0.5rem 1rem 0.5rem;
         margin-inline: auto;
-        border-bottom: 0.1rem solid white;
+        border-bottom: 0.1rem solid #FFF;
         @include flexCenter($direction: row, $justify: space-between);
-
-
+        
         ul {
             margin-block: 1rem;
 
             li {
-                margin-inline: 0.5rem;
+                margin-inline: 0.55rem;
+                
+                a {
+                    font-size: clamp(.9rem, 1.3vw, 1.5rem);
+                }
             }
         }
     }

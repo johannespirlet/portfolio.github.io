@@ -1,50 +1,52 @@
 @import 'variables';
 @import 'mixins';
 
+#header_container {
 
-header {
+    @include flexCenter($direction: row, $justify: space-between);
+    padding: max(2%, 1.5svh);
+    background-color: lightgrey;
 
-    background-color: rgb(211, 211, 211);
+    #logo {
+        height: 2.2rem;
+    }
 
-    #header_container {
+    nav {
+        @include flexCenter($direction: row, $justify: flex-end);
+        width: 80%;
 
-        @include flexCenter($direction: row, $justify: space-between);
-        padding: 2rem;
+        #lang_container {
+            width: 3rem;
+            height: 1.5rem;
+        }
 
-        nav {
-            @include flexCenter($direction: row, $justify: flex-end);
-            width: 80%;
+        #menu,
+        #menu>* {
+            margin-inline: 1rem;
+        }
 
-            > * {
-                margin-inline: 1rem;
+        #menu {
+
+            a {
+                padding-inline: .9rem;
+                letter-spacing: 1px;
+                font-weight: 500;
+                transition: color 0.3s ease;
+                color: #333;
             }
 
-            #lang_container {
-                background-color: green;
-                width: 3rem;
-                height: 1.5rem;
-            }
-
-            #menu {
-                scroll-behavior: smooth;
-
-                a {
-                    padding-inline: 1rem;
-                    letter-spacing: 1px;
-                    font-weight: 500;
-                    transition: color 0.3s ease;
-                    color: #333;
-                }
-
-                a:hover {
-                    color: tomato;
-                }
+            a:hover {
+                color: tomato;
             }
         }
     }
 
-    #burger {
-        display: none;
-    }
 
+}
+
+
+
+#sidemenu,
+#burger {
+    display: none;
 }

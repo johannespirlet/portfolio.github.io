@@ -13,7 +13,7 @@
 
         <div id="header_container">
 
-            <a href="./">LOGO</a>
+            <a id="logo" href="./">LOGO</a>
 
             <nav>
                 <ul id="menu">
@@ -25,7 +25,6 @@
                 <div id="lang_container">
                     <div></div>
                 </div>
-
                 <div id="burger">
 
                     <input type="checkbox" />
@@ -33,18 +32,22 @@
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+                <div id="sidemenu" class="slide-in">
 
-                    <ul id="sidemenu">
-                        <a href="#">
-                            <li>about me</li>
-                        </a>
-                        <a href="#">
-                            <li>work</li>
-                        </a>
-                        <a href="#">
-                            <li>contact</li>
-                        </a>
+
+                    <ul>
+                        <li>
+                            <a href="#about">about me</a>
+                        </li>
+                        <li>
+                            <a href="#work">work</a>
+                        </li>
+                        <li>
+                            <a href="#contact">contact</a>
+                        </li>
                     </ul>
+
                 </div>
             </nav>
 
@@ -53,11 +56,27 @@
     </header>
 
     <main>
+        <section>
+            <div id="welcome_wrapper">
+                <img id="me" src="./img/me.JPG" alt="Johannes Pirlet Frontend Developer" />
+                <a>
+                    <div id="textcontainer">
+                        <h3 id="greeting">Hi</h3>
+                        <h4 id="introduction">Ich bin <i>Johannes Pirlet</i></h4>
+                        <h5 id="sub_introduction">Frontend Developer</h5>
+
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="helper-icon scroll_down"></div>
+
         <section id="about">
             <div class="intersec_container">
                 <h1>about</h1>
                 <p>Hier nur mal ein kurzer Abriss meiner Fähigkeiten im Umgang mit WebTechnologien und Erfahrungen im
-                    Bereich der Frontend Programmierung</p>
+                    Bereich der Frontend Programmierung.</p>
             </div>
             <div class="sec_container about_sec">
                 <div>
@@ -68,7 +87,8 @@
                         Temporibus facere debitis perferendis, in quaerat maxime. Tempora vel nobis libero! Odio quos a
                         neque voluptas nemo illo sit saepe cupiditate laborum.</p>
                     <a class="btn" href="./#contact">Kontakt</a>
-                    <a class="btn" href="https://www.google-analytics.com/analytics.js" download="file">Download CV</a>
+                    <a download="Lebenslauf.pdf" href="./files/JP_Lebenslauf.pdf" class="btn"><img src="./img/dl.svg"
+                            alt="Download Johannes' CV"> CV</a>
                 </div>
                 <div>
                     <h2>Mein TechStack</h2>
@@ -90,15 +110,51 @@
         <section id="work">
             <div class="intersec_container">
                 <h1>work</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium, ipsum
-                    earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio molestias
-                    possimus, velit quidem nam!</p>
+                <p>Im folgenden findest du meine professionelle Arbeit von Kunden, sowie meine privaten Projekte. Schau sie dir gerne genauer an und teile mir auch gerne mit, was du von ihnen hältst. Viel Spaß beim stöbern!</p>
             </div>
             <div class="sec_container">
-                <h1>Heading 1</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium, ipsum
-                    earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio molestias
-                    possimus, velit quidem nam!</p>
+                <div class="project-card">
+                    <div class="card-col">
+                        <img src="/portfolio.github.io/img/me.JPG" />
+                    </div>
+                    <div class="card-col">
+                        <h1>Projekt 1</h1>
+                        <h2>Techs</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium,
+                            ipsum
+                            earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio
+                            molestias
+                            possimus, velit quidem nam!
+                        </p>
+                        <div>
+                            <a class="btn" href="#">Case Study</a>
+                            <a class="btn" href="#">Git</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="sec_container">
+                <div class="project-card">
+                    <div class="card-col">
+                        <img src="/portfolio.github.io/img/me.JPG" />
+                    </div>
+                    <div class="card-col">
+                        <h1>Projekt 2</h1>
+                        <h2>Techs</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium,
+                            ipsum
+                            earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio
+                            molestias
+                            possimus, velit quidem nam!
+                        </p>
+                        <div>
+                            <a class="btn" href="#">Case Study</a>
+                            <a class="btn" href="#">Git</a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
         <section id="contact">
@@ -120,8 +176,8 @@
                 </form>
             </div>
         </section>
-        <a id="arrow_up" href="./#top">
-            <span></span>
+        <a class="helper-icon" href="./#top">
+            <span id="arrow_up"></span>
         </a>
     </main>
     <footer>
@@ -137,13 +193,13 @@
             <ul>
                 <li><a href="./#about">about me</a></li>
                 <li><a href="./#work">projects</a></li>
-                <li><a href="./#contact">stay in touch</a></li>
+                <li><a href="./#contact">contact</a></li>
             </ul>
         </div>
         <p>© Copyright 2023. Made by Johannes Pirlet</p>
     </footer>
 
-    <div class="sm_menu fixed_nav">
+    <div class="sm_menu fixed_nav slide-in">
         <a class="sm_fixed_icon" href="" title="Connect with me on LinkedIn" target="_blank"></a>
         <a class="sm_fixed_icon" href="https://github.com/johannespirlet" title="Follow me on Github"
             target="_blank"></a>
