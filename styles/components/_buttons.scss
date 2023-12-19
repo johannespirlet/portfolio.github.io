@@ -1,0 +1,27 @@
+@use '../base' as *;
+
+.btn {
+    text-align: center;
+    all: unset;
+    display: inline-block;
+    margin: 1.2rem 0.5rem;
+    padding: 0.7rem 1.1rem;
+    background-color: $btn-color;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: transform 1000ms;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+    img {
+        @include box(.95rem);
+    }
+}
+
+.btn:hover,
+.btn:focus-visible {
+    transform: translateY(-4px);
+    transition: transform 250ms;
+}

@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#0000">
+    <meta name="description"
+        content="This young Javascript developer and UX/UI ethusiast is looking for some coding fun. Check him out!">
+    <meta name="author" content="Johannes Pirlet">
+    <meta name="keywords" content="Johannes, Pirlet, frontend, developer, portfolio">
+    <meta property="og:title" content="Johannes Pirlet - Frontend Developer" />
+    <meta property="og:site_name" content="Johannes Pirlets Portfolio Website" />
+    <meta property="og:url" content="https://johannespirlet.github.io/portfolio.github.io/" />
+    <meta property="og:description"
+        content="This young Javascript developer and UX/UI ethusiast is looking for some coding fun. Check him out!" />
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:image" content="" /> link to homepage snapshot url-->
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Johannes Pirlet | Frontend Developer</title>
+    <title>Johannes Pirlet - Frontend Developer - Portfolio</title>
+    <script>let texts, placeholder, titles, alts, ariaLabels;</script>
+    <script src="./script.js" type="module"></script>
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
 </head>
 
 <body>
@@ -13,22 +38,21 @@
 
         <div id="header_container">
 
-            <a id="logo" href="./">LOGO</a>
+            <a href="./" id="logo" aria-label></a>
 
             <nav>
-                <ul id="menu">
-                    <li><a href="#about">about me</a></li>
-                    <li><a href="#work">projects</a></li>
-                    <li><a href="#contact">stay in touch</a></li>
+                <ul role="list" id="menu">
+                    <li><a class="nav-link" href="#about" lang></a></li>
+                    <li><a class="nav-link" href="#work" lang></a></li>
+                    <li><a class="nav-link" href="#contact" lang></a></li>
                 </ul>
 
-                <div id="lang_container">
-                    <div></div>
-                </div>
+                <select tabindex="-1">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                </select>
                 <div id="burger">
-
-                    <input type="checkbox" />
-
+                    <input type="checkbox" aria-label />
                     <span></span>
                     <span></span>
                     <span></span>
@@ -38,13 +62,13 @@
 
                     <ul>
                         <li>
-                            <a href="#about">about me</a>
+                            <a href="#about" lang></a>
                         </li>
                         <li>
-                            <a href="#work">work</a>
+                            <a href="#work" lang></a>
                         </li>
                         <li>
-                            <a href="#contact">contact</a>
+                            <a href="#contact" lang></a>
                         </li>
                     </ul>
 
@@ -56,42 +80,45 @@
     </header>
 
     <main>
-        <section>
+        <section id="welcome">
             <div id="welcome_wrapper">
-                <img id="me" src="./img/me.JPG" alt="Johannes Pirlet Frontend Developer" />
-                <a>
-                    <div id="textcontainer">
-                        <h3 id="greeting">Hi</h3>
-                        <h4 id="introduction">Ich bin <i>Johannes Pirlet</i></h4>
-                        <h5 id="sub_introduction">Frontend Developer</h5>
-
-                    </div>
-                </a>
+                <img id="me" src="./img/pics/me.JPG" alt />
+                <div>
+                    <h3 id="greeting" lang></h3>
+                    <h4 id="introduction" lang></h4>
+                    <h5 id="sub_introduction" lang></h5>
+                </div>
             </div>
         </section>
 
-        <div class="helper-icon scroll_down"></div>
+        <div class="helper-icon scroll_down" aria-hidden="true">
+            <svg viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#000;stroke-width:20px;" />
+                <path id="mouse"
+                    d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+                    style="fill:none;stroke:#000;stroke-width:20px;" />
+            </svg>
+        </div>
 
-        <section id="about">
-            <div class="intersec_container">
-                <h1>about</h1>
-                <p>Hier nur mal ein kurzer Abriss meiner Fähigkeiten im Umgang mit WebTechnologien und Erfahrungen im
-                    Bereich der Frontend Programmierung.</p>
+        <section>
+            <div class="intersec_container animatable fadeIn">
+                <h1 id="about" lang></h1>
+                <p lang></p>
             </div>
             <div class="sec_container about_sec">
-                <div>
-                    <h2>Hey</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa earum adipisci maxime quidem iure
-                        quis quam deleniti illum blanditiis doloremque qui consectetur, error quibusdam reiciendis animi
-                        voluptatem. Sapiente, deleniti odio!Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Temporibus facere debitis perferendis, in quaerat maxime. Tempora vel nobis libero! Odio quos a
-                        neque voluptas nemo illo sit saepe cupiditate laborum.</p>
-                    <a class="btn" href="./#contact">Kontakt</a>
-                    <a download="Lebenslauf.pdf" href="./files/JP_Lebenslauf.pdf" class="btn"><img src="./img/dl.svg"
-                            alt="Download Johannes' CV"> CV</a>
+                <div class="animatable bounceInLeft">
+                    <h2 lang></h2>
+                    <p lang></p>
+                    <p lang></p>
+                    <p lang></p>
+                    <a class="btn" href="./#contact" lang></a>
+                    <button onclick="window.open('./files/JP_Lebenslauf.pdf')" class="btn" lang><img
+                            src="./img/icons/dl.svg" alt></button>
                 </div>
-                <div>
-                    <h2>Mein TechStack</h2>
+                <div class="animatable bounceInRight">
+                    <h2 lang></h2>
                     <div id="stack_wrapper">
                         <div>HTML</div>
                         <div>CSS</div>
@@ -107,108 +134,86 @@
 
             </div>
         </section>
-        <section id="work">
+
+        <section class="animatable fadeInDown">
             <div class="intersec_container">
-                <h1>work</h1>
-                <p>Im folgenden findest du meine professionelle Arbeit von Kunden, sowie meine privaten Projekte. Schau sie dir gerne genauer an und teile mir auch gerne mit, was du von ihnen hältst. Viel Spaß beim stöbern!</p>
+                <h1 id="work" lang></h1>
+                <p lang></p>
             </div>
+
             <div class="sec_container">
-                <div class="project-card">
+                <div class="project-card animatable fadeIn">
                     <div class="card-col">
-                        <img src="/portfolio.github.io/img/me.JPG" />
+                        <img src="/portfolio.github.io/img/pics/me.JPG" alt />
                     </div>
                     <div class="card-col">
-                        <h1>Projekt 1</h1>
-                        <h2>Techs</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium,
-                            ipsum
-                            earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio
-                            molestias
-                            possimus, velit quidem nam!
-                        </p>
+                        <h1 lang></h1>
+                        <h2 lang></h2>
+                        <p lang></p>
                         <div>
-                            <a class="btn" href="#">Case Study</a>
-                            <a class="btn" href="#">Git</a>
+                            <button class="btn" href="#" lang></button>
+                            <button class="btn" href="#">Git</button>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div class="sec_container">
-                <div class="project-card">
-                    <div class="card-col">
-                        <img src="/portfolio.github.io/img/me.JPG" />
-                    </div>
-                    <div class="card-col">
-                        <h1>Projekt 2</h1>
-                        <h2>Techs</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur praesentium,
-                            ipsum
-                            earum nisi numquam. At reiciendis distinctio magni impedit in enim commodi animi odio
-                            molestias
-                            possimus, velit quidem nam!
-                        </p>
-                        <div>
-                            <a class="btn" href="#">Case Study</a>
-                            <a class="btn" href="#">Git</a>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
         </section>
-        <section id="contact">
+
+        <section class="animatable fadeIn">
             <div class="intersec_container">
-                <h1>contact</h1>
-                <p>Schreiben Sie mir gerne. Das nachfolgende Formular hilft Ihnen mich unmittelbar zu kontaktieren. Ich
-                    bin neugierig auf Ihre Ideen und antworte schnellstmöglich auf Ihr Kontaktgesucht. Bis bald!</p>
+                <h1 id="contact" lang></h1>
+                <p lang></p>
             </div>
             <div class="sec_container">
-                <form method="post" action="#">
-                    <label class="contact_form_label" for="name">Name</label>
-                    <input class="contact_form_input" type="name" placeholder="Ihr Name" id="name" required />
-                    <label class="contact_form_label" for="email">E-Mail</label>
-                    <input class="contact_form_input" type="email" placeholder="Ihre E-Mail" id="email" required />
-                    <label class="contact_form_label" for="message">Nachricht</label>
-                    <textarea class="contact_form_input" rows="10" name="message" placeholder="Und ihre Nachricht"
-                        id="message" required></textarea>
-                    <a type="submit" class="btn">Abschicken</a>
+                <form>
+                    <label class="contact_form_label" for="name" lang></label>
+                    <input class="contact_form_input" type="name" placeholder id="name" required />
+                    <label class="contact_form_label" for="email" lang></label>
+                    <input class="contact_form_input" type="email" placeholder id="email" required />
+                    <label class="contact_form_label" for="message" lang></label>
+                    <textarea class="contact_form_input" rows="10" name="message" placeholder id="message"
+                        required></textarea>
+                    <button type="submit" class="btn" lang></button>
                 </form>
+                <p class="success-message" aria-hidden="true" lang></p>
             </div>
         </section>
-        <a class="helper-icon" href="./#top">
+
+        <a class="helper-icon" href="./#top" aria-label>
             <span id="arrow_up"></span>
         </a>
     </main>
+
     <footer>
         <div>
-            <div class="sm_menu footer_nav">
-                <a class="sm_footer_icon" href="" title="Connect with me on LinkedIn" target="_blank"></a>
-                <a class="sm_footer_icon" href="https://github.com/johannespirlet" title="Like Me on Facebook"
-                    target="_blank"></a>
+            <div class="sm_menu">
+                <a class="sm_footer_icon" href="https://www.xing.com/profile/Johannes_Pirlet/cv" title target="_blank"
+                    alt></a>
+                <a class="sm_footer_icon" href="https://github.com/johannespirlet" title target="_blank" alt></a>
                 <a class="sm_footer_icon"
-                    href="mailto:johannes-pirlet@gmx.de?subject=Eine%20kleine%20Nachricht&amp;body=Sehr%20geehrter%20Herr%20Pirlet,"
-                    title="Send me an E-Mail" target="_blank"></a>
+                    href="mailto:johannes-pirlet@gmx.de?subject=Kontaktgesuch&amp;body=Sehr%20geehrter%20Herr%20Pirlet,"
+                    title target="_blank" alt></a>
             </div>
-            <ul>
-                <li><a href="./#about">about me</a></li>
-                <li><a href="./#work">projects</a></li>
-                <li><a href="./#contact">contact</a></li>
+            <ul role="list">
+                <li><a class="nav-link" href="./#about" lang></a></li>
+                <li><a class="nav-link" href="./#work" lang></a></li>
+                <li><a class="nav-link" href="./#contact" lang></a></li>
             </ul>
         </div>
-        <p>© Copyright 2023. Made by Johannes Pirlet</p>
+        <p>© Copyright 2024. Made by Johannes Pirlet</p>
     </footer>
 
     <div class="sm_menu fixed_nav slide-in">
-        <a class="sm_fixed_icon" href="" title="Connect with me on LinkedIn" target="_blank"></a>
-        <a class="sm_fixed_icon" href="https://github.com/johannespirlet" title="Follow me on Github"
-            target="_blank"></a>
+        <a class="sm_fixed_icon" href="https://www.xing.com/profile/Johannes_Pirlet/cv" title target="_blank"
+            tabindex="-1"></a>
+        <a class="sm_fixed_icon" href="https://github.com/johannespirlet" title target="_blank" tabindex="-1"></a>
         <a class="sm_fixed_icon"
-            href="mailto:johannes-pirlet@gmx.de?subject=Eine%20kleine%20Nachricht&amp;body=Sehr%20geehrter%20Herr%20Pirlet,"
-            title="Send me an E-Mail" target="_blank"></a>
+            href="mailto:johannes-pirlet@gmx.de?subject=Kontaktgesuch&amp;body=Sehr%20geehrter%20Herr%20Pirlet," title
+            target="_blank" tabindex="-1"></a>
     </div>
 
-    <script src="./script.js"></script>
 </body>
 
 </html>

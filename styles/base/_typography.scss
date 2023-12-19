@@ -1,0 +1,103 @@
+@use 'colors' as *;
+
+
+::selection {
+    background: $dark-textcolor;
+    color: $bright-textcolor;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+h2 {
+    font: 800 clamp(2rem, 2.5vw, 3.5rem) 'DM Serif Display', serif;
+}
+
+h3 {
+    font: 600 clamp(1.8em, 4vw, 5em) 'DM Serif Display', serif;
+    letter-spacing: 1px;
+
+}
+
+h4 {
+    font: 400 clamp(1.1em, 3vw, 3.5em) 'DM Serif Display', serif;
+    letter-spacing: 1px;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: clamp(.6em, 1.5vw, 2em);
+}
+
+a {
+    text-decoration: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p,
+a,
+.btn,
+.custom-select-label,
+.custom-select-option {
+    font-size: clamp(.95rem, 1.2vw, 1.5rem);
+}
+
+footer {
+
+    a {
+        font-size: clamp(.75rem, 1.3vw, 1.5rem);
+    }
+
+    p {
+        text-align: center;
+        font-size: clamp(0.7rem, .9vw, 1.3rem);
+    }
+}
+
+.nav-link,
+p,
+label,
+h1,
+h2,
+main .btn,
+.custom-select-label {
+    color: $dark-textcolor;
+}
+
+main .btn {
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.btn:focus-visible {
+    color: $bright-textcolor;
+}
+
+#sidemenu {
+
+    a {
+        color: $bright-textcolor;
+        font-weight: 500;
+    }
+
+    a:hover,
+    a:active {
+        color: $themecolor-orange;
+    }
+}
+
+#menu {
+
+    a {
+        letter-spacing: .05em;
+        font-weight: 500;
+    }
+}

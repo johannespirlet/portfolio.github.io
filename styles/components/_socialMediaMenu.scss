@@ -1,0 +1,45 @@
+@use '../base' as *;
+
+
+.sm_menu {
+
+    >.sm_footer_icon {
+        display: inline-block;
+        margin-inline: 1.3vw;
+        border-radius: 50%;
+        @include box(2.7rem);
+        opacity: 0.8;
+        @include socialLinks();
+        transform: scale(0.9);
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1);
+        }
+
+    }
+
+    >.sm_fixed_icon {
+        display: block;
+        margin-block: 0.4rem;
+        border-radius: 50%;
+        @include box(min(3.2rem, 12vw));
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+
+        @include socialLinks();
+
+        &:hover {
+            transform: translateX(-10%);
+        }
+    }
+}
+
+.fixed_nav {
+    position: fixed;
+    right: 0;
+    padding-right: 0.5rem;
+    bottom: 30%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}

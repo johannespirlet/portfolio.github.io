@@ -1,0 +1,31 @@
+@use '../base' as *;
+
+#sidemenu {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    @include box(12rem, 100%);
+    z-index: 4;
+    background: $themecolor-dark;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    >ul {
+        height: 100%;
+        padding-top: 5rem;
+        padding-inline: min(2rem, .5%);
+
+        li {
+            display: block;
+            padding-inline: 1.6rem;
+            text-align: right;
+            margin-block: 2rem;
+
+            a {
+                transition: color 0.3s ease;
+            }
+        }
+    }
+
+
+}

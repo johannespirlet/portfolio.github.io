@@ -1,0 +1,41 @@
+@use '../base' as *;
+
+.contact_form_input {
+    padding: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.contact_form_input:focus {
+    outline: 1px groove $themecolor-orange;
+    outline-offset: 1px;
+}
+
+.contact_form_label,
+.contact_form_input+.btn,
+.contact_form_input {
+    display: block;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.contact_form_label {
+    margin-block: .5rem;
+}
+
+button[type="submit"] {
+    padding: .5rem 0;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea,
+.contact_form_input {
+    border-style: inset;
+    border-width: 1px;
+    border-color: rgb(128, 128, 128, 0.8);
+}

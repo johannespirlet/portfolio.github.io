@@ -1,0 +1,47 @@
+@use '../base' as *;
+
+#header_container {
+
+    @include flexCenter($direction: row, $justify: space-between);
+    padding: 1.5svh 3.5%;
+    background-color: $themecolor-dark;
+
+    #logo {
+        @include box(3rem);
+        background: url('../android-chrome-512x512.png');
+        background-size: cover;
+    }
+
+    nav {
+        @include flexCenter($direction: row, $justify: flex-end);
+        gap: 1.5rem;
+
+        #menu {
+
+            a {
+                padding-inline: 2svw;
+                transition: color 0.3s ease;
+                color: white;
+            }
+
+            a:hover {
+                color: $themecolor-orange;
+            }
+        }
+
+        .custom-select-label:before {
+            content: "";
+            display: inline-block;
+            background-image: url(../img/icons/world.svg);
+            background-size: cover;
+            @include box(1.3rem);
+        }
+    }
+
+
+}
+
+#sidemenu,
+#burger {
+    display: none;
+}

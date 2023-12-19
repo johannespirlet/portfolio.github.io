@@ -1,0 +1,77 @@
+@use '../base' as *;
+
+.custom-select-container,
+.custom-select-label,
+.custom-select-list,
+.custom-select-option {
+    box-sizing: border-box;
+}
+
+.custom-select-container {
+    display: inline-block;
+    position: relative;
+    background-color: $border-light;
+    border-radius: 2px;
+}
+
+.custom-select-container:focus-visible {
+    outline: 2px solid $themecolor-orange;
+}
+
+.custom-select-label {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.custom-select-label, .custom-select-option {
+    padding: .1rem .5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-select-container:focus > .custom-select-label {
+    border-radius: 4px;
+    outline: none;
+}
+
+.custom-select-label:after {
+    content: '';
+    display: inline-block;
+    @include triangle (.5rem, $themecolor-dark, down);
+}
+
+.custom-select-list {
+    display: none;
+    position: absolute;
+    border: .5px solid $border-light;
+    padding: 0;
+    margin-top: 5px;
+    border-radius: 2px;
+    width: fit-content;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 5;
+    background-color: $border-light;
+}
+
+.custom-select-list.show {
+    display: block;
+}
+
+.custom-select-option {
+    width: 100%;
+}
+
+.custom-select-option:hover {
+    color: $bright-textcolor;
+    background-color: scale-color($themecolor-dark, $lightness: +20%);
+}
+
+.custom-select-option.selected {
+    color: $bright-textcolor;
+    background-color: $themecolor-dark;
+}
