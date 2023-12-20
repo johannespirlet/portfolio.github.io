@@ -48,7 +48,7 @@
         max-height: fit-content;
 
         #me {
-            width: 100%;
+            @include box(100%, auto);
             transform: inherit;
             box-shadow: inherit;
 

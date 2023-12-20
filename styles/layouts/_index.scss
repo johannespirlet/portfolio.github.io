@@ -47,7 +47,7 @@ li {
 }
 
 #me {
-    width: 50%;
+    @include box(50%, auto);
     transform: translate(70%, 5%) rotate(1deg);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
