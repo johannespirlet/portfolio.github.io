@@ -143,7 +143,7 @@ let loadJS = function (FILE_URL) {
 
     // success event 
     scriptEle.addEventListener("load", () => {
-        console.log(`File loaded: ${scriptEle.src}`);
+        //console.log(`File loaded: ${scriptEle.src}`);
         insertLanguage();
     });
     // error event
@@ -159,7 +159,7 @@ let unloadJS = function () {
     const allScriptNodes = document.querySelectorAll("script");
     for (let i = 0; i < allScriptNodes.length; i++) {
         if (allScriptNodes[i].src == "http://127.0.0.1:5500/portfolio.github.io/lang/lang.en.js" || allScriptNodes[i].src == "http://127.0.0.1:5500/portfolio.github.io/lang/lang.de.js") {
-            console.log(`File unloaded: ${allScriptNodes[i].src}`);
+            //console.log(`File unloaded: ${allScriptNodes[i].src}`);
             allScriptNodes[i].remove();
             return;
         }
