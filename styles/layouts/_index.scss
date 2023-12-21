@@ -47,7 +47,6 @@ li {
 }
 
 #me {
-    @include box(50%, auto);
     transform: translate(70%, 5%) rotate(1deg);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -100,7 +99,7 @@ li {
 .intersec_container {
     text-align: center;
     margin-inline: auto;
-    padding-block: 5rem 2rem;
+    padding-block: 6rem 3rem;
     width: min(75%, 110rem);
 }
 
@@ -124,11 +123,6 @@ li {
     width: 50%;
     float: left;
     text-align: center;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 .success-message {

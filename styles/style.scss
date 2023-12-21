@@ -61,11 +61,10 @@
             }
         }
     }
-
     #menu {
         display: none;
     }
-
+    
     #burger {
         display: block;
         @include box(2rem, 1.6rem);

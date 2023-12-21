@@ -13,22 +13,22 @@ h1 {
 }
 
 h2 {
-  font: 800 clamp(2rem, 2.5vw, 3.5rem) "DM Serif Display", serif;
+  font: clamp(2rem, 2.5vw, 3.5rem) "DM Serif Display", serif;
 }
 
 h3 {
-  font: 600 clamp(1.8em, 4vw, 5em) "DM Serif Display", serif;
+  font: clamp(1.8rem, 4vw, 5rem) "DM Serif Display", serif;
   letter-spacing: 1px;
 }
 
 h4 {
-  font: 400 clamp(1.1em, 3vw, 3.5em) "DM Serif Display", serif;
+  font: clamp(1.2rem, 3vw, 3.5rem) "DM Serif Display", serif;
   letter-spacing: 1px;
 }
 
 h5 {
   font-weight: 400;
-  font-size: clamp(0.6em, 1.5vw, 2em);
+  font-size: clamp(0.8rem, 1.5vw, 2rem);
 }
 
 a {
@@ -43,11 +43,11 @@ a,
 .btn,
 .custom-select-label,
 .custom-select-option {
-  font-size: clamp(0.95rem, 1.2vw, 1.5rem);
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
 footer a {
-  font-size: clamp(0.75rem, 1.3vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.3vw, 1.5rem);
 }
 footer p {
   text-align: center;
@@ -87,6 +87,61 @@ main .btn {
   font-weight: 500;
 }
 
+/* FONTS */
+/* latin-ext */
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmserifdisplay/v15/-nFnOHM81r4j6k0gjAW3mujVU2B2G_5x0vrx52jJ3Q.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmserifdisplay/v15/-nFnOHM81r4j6k0gjAW3mujVU2B2G_Bx0vrx52g.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 .btn {
   text-align: center;
   all: unset;
@@ -197,7 +252,7 @@ footer {
   background-color: rgba(212, 212, 212, 0.5);
 }
 footer > div {
-  width: 75%;
+  width: 85%;
   padding: 2rem 0.5rem 1rem 0.5rem;
   margin-inline: auto;
   border-bottom: 0.1rem solid hsl(0, 0%, 100%);
@@ -228,7 +283,7 @@ footer p {
 #header_container #logo {
   width: 3rem;
   height: 3rem;
-  background: url("../android-chrome-512x512.png");
+  background: url("../favicon/android-chrome-192x192.png");
   background-size: cover;
 }
 #header_container nav {
@@ -426,8 +481,6 @@ li {
 }
 
 #me {
-  width: 50%;
-  height: auto;
   transform: translate(70%, 5%) rotate(1deg);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -470,7 +523,7 @@ li {
 .intersec_container {
   text-align: center;
   margin-inline: auto;
-  padding-block: 5rem 2rem;
+  padding-block: 6rem 3rem;
   width: min(75%, 110rem);
 }
 
@@ -496,10 +549,6 @@ li {
   width: 50%;
   float: left;
   text-align: center;
-}
-.card-col img {
-  max-width: 100%;
-  height: auto;
 }
 
 .success-message {

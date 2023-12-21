@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#ff0000">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ff0000">
-    <meta name="theme-color" content="#0000">
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+    <!-- Favicon Ends -->
     <meta name="description"
         content="This young Javascript developer and UX/UI ethusiast is looking for some coding fun. Check him out!">
     <meta name="author" content="Johannes Pirlet">
@@ -26,7 +27,11 @@
         content="This young Javascript developer and UX/UI ethusiast is looking for some coding fun. Check him out!" />
     <meta property="og:type" content="website" />
     <!--<meta property="og:image" content="" /> link to homepage snapshot url-->
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="./img/pics/me.jpg">
     <title>Johannes Pirlet - Frontend Developer - Portfolio</title>
     <script>let texts, placeholder, titles, alts, ariaLabels;</script>
     <script src="./script.js" type="module"></script>
@@ -82,7 +87,7 @@
     <main>
         <section id="welcome">
             <div id="welcome_wrapper">
-                <img id="me" src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/me.jpg?raw=true" alt />
+                <img id="me" src="./img/pics/me.jpg" width="50%" height="auto" alt />
                 <div>
                     <h3 id="greeting" lang></h3>
                     <h4 id="introduction" lang></h4>
@@ -144,7 +149,8 @@
             <div class="sec_container">
                 <div class="project-card animatable fadeIn">
                     <div class="card-col">
-                        <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/me.jpg?raw=true" alt />
+                        <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/me.jpg?raw=true"
+                            width="100%" height="auto" alt />
                     </div>
                     <div class="card-col">
                         <h1 lang></h1>
