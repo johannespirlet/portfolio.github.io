@@ -30,7 +30,7 @@ texts = [
     "E-Mail",
     "Nachricht",
     "Abschicken",
-    "Danke. Das Formular wurde erfolgreich übermittelt!",
+    "Vielen Dank! Das Formular wurde erfolgreich übermittelt.",
     "über mich",
     "projekte",
     "kontakt"
