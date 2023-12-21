@@ -39,8 +39,8 @@
     position: fixed;
     right: 0;
     padding-right: 0.5rem;
-    top: 30%;
+    top: 50lvh;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(0);
+    transform: translate(0,-50%);
     border-radius: 5px;
 }

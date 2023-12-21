@@ -40,8 +40,8 @@ document.addEventListener("scroll", function () {
     const sm_fixed_nav = document.querySelector(".fixed_nav");
 
     ((window.innerHeight + Math.round(window.scrollY) + 160) >= (document.body.offsetHeight) || image_of_mine.getBoundingClientRect().bottom > 0)
-        ? sm_fixed_nav.classList.add("slide-in") :
-        sm_fixed_nav.classList.remove("slide-in");
+        ? sm_fixed_nav.classList.add("slide-in-centered") :
+        sm_fixed_nav.classList.remove("slide-in-centered");
 
 });
 
