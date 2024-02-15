@@ -9,7 +9,7 @@ main {
     }
 
     h2 {
-        margin-block: 1.2rem;
+        margin-block: 0.5rem 1rem;
     }
 
     h4 {
@@ -123,6 +123,10 @@ li {
     width: 50%;
     float: left;
     text-align: center;
+}
+
+.card-col:nth-child(2) {
+    padding-inline: 1rem;
 }
 
 .success-message {

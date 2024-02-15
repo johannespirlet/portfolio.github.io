@@ -12,6 +12,10 @@ h1 {
   font-size: clamp(2.4rem, 5vw, 4rem);
 }
 
+.card-col > h1 {
+  font-size: clamp(1.9rem, 4vw, 3.5rem);
+}
+
 h2 {
   font: clamp(2rem, 2.5vw, 3.5rem) "DM Serif Display", serif;
 }
@@ -316,6 +320,7 @@ footer p {
   margin-top: 0.3rem;
   margin-bottom: 1rem;
   font-family: "Avenir Next", "Avenir", sans-serif;
+  caret-color: rgb(255, 99, 71);
 }
 
 .contact_form_input:focus {
@@ -405,7 +410,7 @@ textarea,
   position: fixed;
   right: 0;
   padding-right: 0.5rem;
-  top: 50lvh;
+  top: 50svh;
   transition: transform 0.3s ease-in-out;
   transform: translate(0, -50%);
   border-radius: 5px;
@@ -418,7 +423,7 @@ main h1 {
   padding-block: 1rem;
 }
 main h2 {
-  margin-block: 1.2rem;
+  margin-block: 0.5rem 1rem;
 }
 main h4 {
   transform: translateX(-150%);
@@ -520,6 +525,10 @@ li {
   width: 50%;
   float: left;
   text-align: center;
+}
+
+.card-col:nth-child(2) {
+  padding-inline: 1rem;
 }
 
 .success-message {
