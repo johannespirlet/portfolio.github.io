@@ -61,7 +61,7 @@ ariaLabels = [
 alts = [
     "This is the cover image of me looking contemplative.",
     "Download Johannes' CV",
-    "Cover image",
+    "This mockup shows three screen examples of the Ropeless app in front of a blurry background that is a boulder climbing gym in paris.",
     "Connect with me on Xing",
     "Like Me on Facebook",
     "Send me an E-Mail"

@@ -20,9 +20,9 @@ texts = [
     "Mein TechStack",
     "projekte",
     "Im folgenden findest du meine professionelle Arbeit von Kunden, sowie meine privaten Projekte. Schau sie dir gerne genauer an und teile mir auch gerne mit, was du von ihnen hältst. Viel Spaß beim Stöbern!",
-    "Projekt 1",
-    "Techs",
-    "Fülltext für Projekt 1",
+    `App Design "Ropeless"`,
+    "Sketch",
+    "Ein privates Projekt, bei dem ich mich vor allem mit der Planung und Gestaltung eines UI einer mobilen App auseinandergesetzt habe.",
     "Fallstudie",
     "kontakt",
     "Schreiben Sie mir gerne. Das nachfolgende Formular hilft Ihnen mich unmittelbar zu kontaktieren. Ich bin neugierig auf Ihre Ideen und antworte schnellstmöglich auf Ihr Kontaktgesuch. Bis bald!",
@@ -62,7 +62,7 @@ ariaLabels = [
 alts = [
     "Dies ist mein Coverbild auf dem ich sehr nachdenklich schaue",
     "Lade Johannes Lebenslauf herunter",
-    "Coverbild",
+    "Dieses Mockup zeigt drei Iphones mit 3 Beispielscreens der App Ropeless vor einem unscharfen Hintergrund eines Pariser Boulderhalle",
     "Verbinde dich auf Xing mit mir",
     "Folge mir auf Github",
     "Schick mir eine Email"
