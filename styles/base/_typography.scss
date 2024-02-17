@@ -16,11 +16,11 @@ h1 {
 }
 
 .card-col > h1 {
-    font-size: clamp(1.9rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 2.5vw, 3.2rem);
 }
 
 h2 {
-    font: clamp(2rem, 2.5vw, 3.5rem) 'DM Serif Display', serif;
+    font: clamp(2rem, 2.3vw, 3rem) 'DM Serif Display', serif;
 }
 
 h3 {
@@ -53,6 +53,29 @@ a,
     font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
+.article-picture-wrapper p {
+    color: grey;
+    font-size: clamp(0.7rem, 1vw, 1.3rem);
+}
+
+article {
+
+    h3 {
+        font: clamp(2.3rem, 4.5vw, 5rem) 'DM Serif Display', serif;
+        color: $themecolor-orange;
+    }
+
+    p:nth-child(1) {
+    color: $dark-textcolor;
+    font-size: clamp(0.9rem, 1.1vw, 1.4rem);
+    }
+
+    a {
+        color: $themecolor-orange !important;
+        font-weight: 600;
+    }
+}
+
 footer {
 
     a {
@@ -71,6 +94,7 @@ label,
 h1,
 h2,
 main .btn,
+span,
 .custom-select-label {
     color: $dark-textcolor;
 }

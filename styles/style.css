@@ -13,11 +13,11 @@ h1 {
 }
 
 .card-col > h1 {
-  font-size: clamp(1.9rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 2.5vw, 3.2rem);
 }
 
 h2 {
-  font: clamp(2rem, 2.5vw, 3.5rem) "DM Serif Display", serif;
+  font: clamp(2rem, 2.3vw, 3rem) "DM Serif Display", serif;
 }
 
 h3 {
@@ -50,6 +50,24 @@ a,
   font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
+.article-picture-wrapper p {
+  color: grey;
+  font-size: clamp(0.7rem, 1vw, 1.3rem);
+}
+
+article h3 {
+  font: clamp(2.3rem, 4.5vw, 5rem) "DM Serif Display", serif;
+  color: rgb(255, 99, 71);
+}
+article p:nth-child(1) {
+  color: #333;
+  font-size: clamp(0.9rem, 1.1vw, 1.4rem);
+}
+article a {
+  color: rgb(255, 99, 71) !important;
+  font-weight: 600;
+}
+
 footer a {
   font-size: clamp(0.8rem, 1.3vw, 1.5rem);
 }
@@ -64,6 +82,7 @@ label,
 h1,
 h2,
 main .btn,
+span,
 .custom-select-label {
   color: #333;
 }
@@ -120,8 +139,8 @@ main .btn {
   text-align: center;
   all: unset;
   display: inline-block;
-  margin: 1.2rem 0.5rem;
-  padding: 0.7rem 1.1rem;
+  margin: 1.3rem 0.5rem;
+  padding: 0.6rem 1.1rem;
   background-color: rgba(255, 99, 71, 0.9);
   border-radius: 0.2rem;
   cursor: pointer;
@@ -152,7 +171,7 @@ main .btn {
 .custom-select-container {
   display: inline-block;
   position: relative;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 2px;
 }
 
@@ -192,7 +211,7 @@ main .btn {
 .custom-select-list {
   display: none;
   position: absolute;
-  border: 0.5px solid #fff;
+  border: 0.5px solid hsla(0, 0%, 50%, 0.453);
   padding: 0;
   margin-top: 5px;
   border-radius: 2px;
@@ -201,7 +220,7 @@ main .btn {
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 5;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .custom-select-list.show {
@@ -506,7 +525,7 @@ li {
 .project-card {
   background-color: rgba(212, 212, 212, 0.5);
   padding: 1.3rem;
-  margin: 1.5rem 0.7rem;
+  margin-block: 1.5rem;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1607843137), 0 4px 24px rgba(0, 0, 0, 0.0784313725);
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1607843137), 0 4px 24px rgba(0, 0, 0, 0.0784313725);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1607843137), 0 4px 24px rgba(0, 0, 0, 0.0784313725);
@@ -522,13 +541,13 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  align-items: flex-start;
   width: 50%;
   float: left;
-  text-align: center;
 }
 
 .card-col:nth-child(2) {
-  padding-inline: 1rem;
+  padding-left: 1.3rem;
 }
 
 .success-message {
@@ -568,6 +587,89 @@ li {
 
 .scroll_down #wheel {
   animation: showingscroll ease 1.5s infinite;
+}
+
+.dialog {
+  z-index: 800;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: hsl(0, 0%, 100%);
+  -webkit-box-shadow: 2px 2px 15px -3px rgba(153, 153, 153, 0.2);
+  box-shadow: 2px 2px 10px -4px rgba(153, 153, 153, 0.2);
+  border: 1px solid hsla(0, 0%, 50%, 0.453);
+  border-left: 7vw solid rgb(3, 3, 43);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.2s ease-out 0.1s, opacity 0.1s ease-out;
+}
+.dialog #ropeless-logo {
+  position: absolute;
+  width: max(3.5rem, 15vw);
+  left: -4vw;
+  top: -2vw;
+}
+.dialog .dialog-close {
+  position: absolute;
+  z-index: 900;
+  top: 1rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(255, 99, 71);
+  background: url("../../img/icons/close.svg");
+  border-radius: 30%;
+  cursor: pointer;
+}
+.dialog article {
+  display: inline-block;
+  overflow-y: scroll;
+  height: 90%;
+  margin-block: 5%;
+  padding: 6vh 3vw 2vw 14vw;
+  background-color: hsl(0, 0%, 100%);
+}
+.dialog article h3 {
+  margin-bottom: 1.3rem;
+}
+.dialog article .article-picture-wrapper {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  margin-block: 3rem;
+}
+.dialog article .article-picture-wrapper p {
+  margin-top: 0.5rem;
+}
+.dialog article #pause-logo {
+  width: 20vw;
+  height: 20vw;
+  margin-top: 2rem;
+  float: right;
+}
+
+.vid-dialog {
+  z-index: 810;
+  width: 20vw;
+  height: auto;
+  border: inherit;
+}
+.vid-dialog .dialog-close {
+  right: -5vw;
+  top: -1.5vh;
+}
+.vid-dialog #vid-cropper {
+  overflow: hidden;
+  top: 50%;
+  width: 21.5vw;
+}
+.vid-dialog #vid-cropper video {
+  width: 80vw;
+  margin-left: -29vw;
 }
 
 .slide-in-centered {
@@ -691,9 +793,55 @@ textarea:not([rows]) {
 }
 
 @media only screen and (max-width: 980px) {
+  .btn {
+    display: block;
+    width: 110px;
+    margin-inline: auto;
+  }
+  p, h1, h2, article > h3, .btn {
+    text-align: center;
+  }
   .scroll_down {
     background: url(../img/icons/scroll-down_touch.svg);
     background-size: cover;
+  }
+  .article-picture-wrapper {
+    min-width: 100%;
+  }
+  .vid-dialog {
+    width: 300px;
+    height: 498px;
+  }
+  .vid-dialog .dialog-close {
+    right: -5vw;
+  }
+  .vid-dialog #vid-cropper {
+    width: 300px;
+    height: 498px;
+  }
+  .vid-dialog #vid-cropper video {
+    margin-left: -292px;
+    width: auto;
+    height: 500px;
+  }
+  .dialog .dialog-close {
+    right: -2vw;
+    top: -2vh;
+    -webkit-box-shadow: 2px 2px 10px -4px rgba(153, 153, 153, 0.2);
+    box-shadow: 2px 2px 10px -4px rgba(153, 153, 153, 0.2);
+    border: 1px solid hsla(0, 0%, 50%, 0.453);
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0.2rem;
+    background-position: center;
+    background-size: cover;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .dialog article #pause-logo {
+    width: 10rem;
+    height: 10rem;
   }
   .scroll_down svg {
     display: none;
@@ -701,8 +849,9 @@ textarea:not([rows]) {
   .card-col {
     display: block;
     width: 100%;
-    margin-bottom: 0.5rem;
-    text-align: left;
+  }
+  .card-col:nth-child(2) {
+    padding: 1rem;
   }
   .about_sec {
     display: flex;
@@ -712,6 +861,12 @@ textarea:not([rows]) {
   }
 }
 @media only screen and (max-width: 599px) {
+  .card-col:nth-child(2) {
+    padding: 0;
+  }
+  .sec_container {
+    width: 95%;
+  }
   #header_container {
     background-color: rgba(212, 212, 212, 0.5);
     padding: 0.5svh 3.5%;

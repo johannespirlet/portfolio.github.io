@@ -38,6 +38,7 @@
 </head>
 
 <body>
+    <div id="dialog-bg">
     <header id="top">
 
         <div id="header_container">
@@ -66,13 +67,13 @@
 
                     <ul>
                         <li>
-                            <a href="#about" lang></a>
+                            <a href="#about" lang tabindex="-1"></a>
                         </li>
                         <li>
-                            <a href="#work" lang></a>
+                            <a href="#work" lang tabindex="-1"></a>
                         </li>
                         <li>
-                            <a href="#contact" lang></a>
+                            <a href="#contact" lang tabindex="-1"></a>
                         </li>
                     </ul>
 
@@ -117,9 +118,8 @@
                     <p lang></p>
                     <p lang></p>
                     <p lang></p>
-                    <a class="btn" href="./#contact" lang></a>
-                    <button onclick="window.open('./files/JP_Lebenslauf.pdf')" class="btn" lang><img
-                            src="./img/icons/dl.svg" alt></button>
+                    <a class="btn" href="./#contact" lang alt></a>
+                    <button onclick="window.open('./files/JP_Lebenslauf.pdf')" class="btn" alt lang></button>
                 </div>
                 <div class="animatable bounceInRight">
                     <h2 lang></h2>
@@ -148,16 +148,18 @@
             <div class="sec_container">
                 <div class="project-card animatable fadeIn">
                     <div class="card-col">
-                        <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/mockup1.png?raw=true" alt />
+                        <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/mockup1.png?raw=true"
+                            alt />
                     </div>
                     <div class="card-col">
                         <h1 lang></h1>
                         <h2 lang></h2>
                         <p lang></p>
                         <div>
-                            <button class="btn" href="#" lang></button>
-                            <button class="btn" href="#">Prototype</button>
+                            <a id="ropeless" class="btn" lang tabindex="0"></a>
+                            <button class="proto-btn btn">Prototype</button>                            
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -216,7 +218,50 @@
             href="mailto:johannes-pirlet@gmx.de?subject=Kontaktgesuch&amp;body=Sehr%20geehrter%20Herr%20Pirlet," title
             target="_blank" tabindex="-1"></a>
     </div>
-
+    </div>
+    <div class="dialog vid-dialog">
+        <div class="dialog-close" tabindex="0"></div>
+        <div id="vid-cropper">
+        <video autoplay loop alt>
+            <source src="https://github.com/johannespirlet/portfolio.github.io/blob/main/vid/prototype.mp4?raw=true" type="video/mp4"></source>
+        </video>
+        </div>
+    </div>
+    
+    <div class="dialog project-dialog">
+        <img id="ropeless-logo" src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/logo.svg?raw=true" alt>
+        <div class="dialog-close" tabindex="0"></div>
+        <article>
+            <p><strong lang></strong></p>
+            <h3 lang></h3>
+            <p lang></p>
+            <div class="article-picture-wrapper">
+                <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/lowfidproto.png?raw=true" alt>
+                <p lang></p>
+            </div>
+            <div class="article-picture-wrapper">
+                <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/highfidproto.png?raw=true" alt>
+                <p lang></p>
+            </div>
+            <p lang></p><br>
+            <p><strong lang></strong><span lang></span><br></p><br>
+            <p lang></p>
+            <div class="article-picture-wrapper">
+                <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/styleguide.webp?raw=true" alt>
+                <p lang></p>
+            </div>
+            <p lang></p><br>
+            <p lang></p>
+            <div class="article-picture-wrapper">
+                <img src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/mockup2.jpeg?raw=true" alt>
+            </div>
+            <p lang></p><br>
+            <p lang></p><br>
+            <p><span lang></span><a href="mailto:johannes-pirlet@gmx.de?subject=Kontaktgesuch&amp;body=Sehr%20geehrter%20Herr%20Pirlet," target="_blank" lang></a><span lang></span></p>
+            <button class="proto-btn btn">Prototype</button> 
+            <img id="pause-logo" src="https://github.com/johannespirlet/portfolio.github.io/blob/main/img/pics/ropeless/pausing.svg?raw=true" alt>
+        </article>
+    </div>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ const image_of_mine = document.querySelector("#me");
 
 //use requestAnimationFrame in any Browser
 (function () {
-    var lastTime = 0;
+    const lastTime = 0;
     var vendors = ["ms", "moz", "webkit", "o"];
     for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
         window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
@@ -33,13 +33,50 @@ const image_of_mine = document.querySelector("#me");
         };
 })();
 
+//project and video dialog window open and close event
+const projDialog = document.querySelector(".project-dialog");
+const vidDialog = document.querySelector(".vid-dialog");
+const dialogBg = document.querySelector("#dialog-bg");
+
+document.querySelector("#ropeless").addEventListener("click", () => {
+    sm_fixed_nav.classList.add("slide-in-centered");
+    projDialog.style.visibility = "visible";
+    projDialog.style.opacity = 1;
+    dialogBg.style.opacity = 0.3;
+
+    disableScroll();
+});
+
+document.querySelectorAll(".dialog-close").forEach(node => {
+    node.addEventListener("click", () => {
+        node.parentNode.style.visibility = "hidden";
+        node.parentNode.style.opacity = 0;
+        dialogBg.style.opacity = 1;
+        enableScroll();
+    });
+});
+
+document.querySelectorAll(".proto-btn").forEach(node => {
+    node.addEventListener("click", () => {
+        sm_fixed_nav.classList.add("slide-in-centered");
+        vidDialog.style.visibility = "visible";
+        vidDialog.style.opacity = 1;
+        if(dialogBg.style.opacity == 0.3) {
+            projDialog.style.visibility = "hidden";
+            projDialog.style.opacity = 0;
+        } else dialogBg.style.opacity = 0.3;
+        disableScroll();
+    });
+});
+
+
 
 //Slide-In Event for fixed menu bar in case scroll top is beyond welcome-pic or bottom is beyond footer
+const sm_fixed_nav = document.querySelector(".fixed_nav");
+
 document.addEventListener("scroll", function () {
 
-    const sm_fixed_nav = document.querySelector(".fixed_nav");
-
-    ((window.innerHeight + Math.round(window.scrollY) + 160) >= (document.body.offsetHeight) || image_of_mine.getBoundingClientRect().bottom > 0)
+    ((window.innerHeight + Math.round(window.scrollY) + 160) >= (document.body.offsetHeight) || image_of_mine.getBoundingClientRect().bottom > 0 || dialogBg.style.opacity == 0.3)
         ? sm_fixed_nav.classList.add("slide-in-centered") :
         sm_fixed_nav.classList.remove("slide-in-centered");
 
@@ -284,4 +321,46 @@ function easeInCubic(t) {
 
 function easeInLinear(t) {
     return 2 * t / 10;
+}
+
+//scroll enable and disable event for main (when dialog window is in foreground)
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+const keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+let supportsPassive = false;
+try {
+  dialogBg.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+const wheelOpt = supportsPassive ? { passive: false } : false;
+const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+function disableScroll() {
+  dialogBg.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  dialogBg.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  dialogBg.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  dialogBg.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+function enableScroll() {
+  dialogBg.removeEventListener('DOMMouseScroll', preventDefault, false);
+  dialogBg.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  dialogBg.removeEventListener('touchmove', preventDefault, wheelOpt);
+  dialogBg.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }

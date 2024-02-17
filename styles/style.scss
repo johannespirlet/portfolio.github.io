@@ -6,10 +6,59 @@
 
 @include devices (bigScreen) {
 
+    .btn {
+        display: block;
+        width: 110px;
+        margin-inline: auto;
+    }
+
+    p, h1, h2, article > h3, .btn {
+        text-align: center;
+    }
 
     .scroll_down {
         background: url(../img/icons/scroll-down_touch.svg);
         background-size: cover;
+    }
+
+    .article-picture-wrapper {
+        min-width: 100%;
+    }
+
+    .vid-dialog {
+        @include box(300px, 498px);
+
+        .dialog-close {
+            right: -5vw;
+        }
+    
+        #vid-cropper{
+            @include box(300px, 498px);
+
+            video {
+                margin-left: -292px;
+                @include box(auto, 500px);
+            }
+        }
+    }
+
+    .dialog .dialog-close {
+        right: -2vw;
+        top: -2vh;
+        -webkit-box-shadow: 2px 2px 10px -4px $bg-dark; 
+        box-shadow: 2px 2px 10px -4px $bg-dark;
+        border: 1px solid $border-light;
+        @include box(1.7rem);
+        padding: 0.2rem;
+        background-position:center;
+        background-size: cover;
+        background-origin:content-box;
+        background-repeat: no-repeat;
+        background-color: $bg-light;
+    }
+
+    .dialog article #pause-logo {
+        @include box(10rem);
     }
 
     .scroll_down svg {
@@ -19,8 +68,10 @@
     .card-col {
         display: block;
         width: 100%;
-        margin-bottom: 0.5rem;
-        text-align: left;
+    }
+
+    .card-col:nth-child(2) {
+        padding: 1rem;
     }
 
     .about_sec {
@@ -30,6 +81,16 @@
 }
 
 @include devices (smallScreen) {
+
+
+
+    .card-col:nth-child(2) {
+        padding: 0;
+    }
+
+    .sec_container {
+        width: 95%;
+    }
 
     #header_container {
         background-color: $bg-greyish;
@@ -61,6 +122,7 @@
             }
         }
     }
+
     #menu {
         display: none;
     }

@@ -79,7 +79,6 @@ li {
     }
 
     #stack_wrapper {
-
         display: flex;
         gap: 0.8rem;
         flex-wrap: wrap;
@@ -106,7 +105,7 @@ li {
 .project-card {
     background-color: $bg-greyish;
     padding: 1.3rem;
-    margin: 1.5rem 0.7rem;
+    margin-block: 1.5rem;
     -webkit-box-shadow: 0 2px 4px #00000029, 0 4px 24px #00000014;
     -moz-box-shadow: 0 2px 4px #00000029, 0 4px 24px #00000014;
     box-shadow: 0 2px 4px #00000029, 0 4px 24px #00000014;
@@ -120,13 +119,13 @@ li {
 
 .card-col {
     @include flexCenter($direction: column);
+    align-items: flex-start;
     width: 50%;
     float: left;
-    text-align: center;
 }
 
 .card-col:nth-child(2) {
-    padding-inline: 1rem;
+    padding-left: 1.3rem;
 }
 
 .success-message {
@@ -167,5 +166,98 @@ li {
 .scroll_down #wheel {
 	animation: showingscroll ease 1.5s infinite;
 }
+
+.dialog {
+    z-index: 800;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-color: $bg-light;
+    -webkit-box-shadow: 2px 2px 15px -3px $bg-dark; 
+    box-shadow: 2px 2px 10px -4px $bg-dark;
+    border: 1px solid $border-light;
+    border-left: 7vw solid $themecolor-dark;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.2s ease-out 0.1s,opacity 0.1s ease-out;
+
+    #ropeless-logo {
+        position: absolute;
+        width: max(3.5rem, 15vw);
+        left: -4vw;
+        top: -2vw;
+    }
+
+    .dialog-close {
+        position: absolute;
+        z-index: 900;
+        top: 1rem;
+        right: 2rem;
+        @include box(2rem);
+        background-color: $themecolor-orange;
+        background: url("../../img/icons/close.svg");
+        border-radius: 30%;
+        cursor: pointer;
+    }
+
+    article {
+        display: inline-block;
+        overflow-y: scroll;
+        height: 90%;
+        margin-block: 5%;
+        padding: 6vh 3vw 2vw 14vw;
+        background-color: $bg-light;
+
+        h3 {
+            margin-bottom: 1.3rem;
+        }
+
+        .article-picture-wrapper {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75%;
+            margin-block: 3rem;
+
+            p {
+                margin-top: 0.5rem;
+            }
+        }
+
+        #pause-logo {
+            @include box(20vw);
+            margin-top: 2rem;
+            float: right;
+        }
+    }
+}
+
+.vid-dialog {
+    z-index: 810;
+    @include box(20vw, auto);
+    border: inherit;
+
+    .dialog-close {
+        right: -5vw;
+        top: -1.5vh;
+    }
+
+    #vid-cropper{
+        overflow: hidden;
+        top: 50%;
+        width: 21.5vw;
+ 
+        video {
+            width: 80vw;
+            margin-left: -29vw;
+        }
+    }
+
+}
+
+
 
 

@@ -33,7 +33,24 @@ texts = [
     "Vielen Dank! Das Formular wurde erfolgreich übermittelt.",
     "über mich",
     "projekte",
-    "kontakt"
+    "kontakt",
+    "Die Suche hat ein Ende",
+    "Ropeless",
+    "Im Laufe meiner Screendesign Weiterbildung im Februar lernte ich den erweiterten Umgang mit Sketch und setzte Designprinzipien des Material Designs und der User Interface Guidelines in Entwürfen um. Daraus entstand schließlich das App Design von Ropeless, einer Plattform für BoulderInnen, die sich mit Sporthallen in Europa vernetzten möchten.",
+    "Low Fidelity Wireframes vom Onboarding",
+    "High Fidelity Wireframes des Detail und Profilscreens",
+    "Mit Hilfe einer groben Konzeption, Scribbles und Wireframes rahmte ich meine Designentscheidungen für die Haupt-Screens und schließlich des Prototypen.",
+    "Die Idee: ",
+    "junge SportlerInnen, die ursprünglich der neuen indoor Klettergeneration anhören, finden mit Ropeless einen unkomplizierten Weg in neuen Städten eine Halle zu suchen. Von sozialen und ehrgeizigen Motiven geleitet, hat die Vernetzung einen ähnlich hohen Stellenwert wie die Selbstprofilierung und Identifikation mit der Heimhalle. Im Fokus steht jedoch die Suche nach einer gut bewerteten Halle, die beim nächsten Städtetrip oder der nächsten Geschäftsreise ausfindig gemacht werden kann.",
+    "Ideal, um sein Lieblingshobby mit dem Reisen zu vereinen 💛",
+    "Styleguide von Ropeless",
+    "Die wesentlichen Features nach Zielgruppe und Nutzart betreffen alle Hauptscreens gleichermaßen. Man möchte ein differenziertes Boulderprofil erstellen (Vorlieben, Skills, Lieblingshallen, Lieblingsprodukte z.B. Schuhe, Chalkmarken), sowie bei der Hallenansicht reisenützliche Halleninformationen bekunden dürfen, die communitybasiert und ohne Hallenwerbung wahrnehmbar sind. Bei der Hallensuche liegt der Schwerpunkt auf dem übersichtlichen UI und Filtern, die die wichtigsten Hallenkriterien der Suchenden abbilden.",
+    "Um eine Übergabe an die IT zu erleichtern, waren die Komponenten, Farben, Styles und Layer in Sketch angelegt und in einem Styleguide übersichtlich zusammengestellt.",
+    "Abschließende konzeptionelle Gedanken für die Grundgestaltung der Anwendung kamen im weiteren Planungsprozess. Als reiseunterstütztendes Tool bzw. für die mobile Anwendung im Gym wählte ich zudem eine App und keine Website. Bei einer Verwendung während der Hallenöffnungs- und Reisezeiten wählte ich den Tagmodus als default.",
+    "Obwohl einige Angaben über die eigenen Klettervorlieben und -fähigkeiten gemacht werden können, soll Ropeless dabei klar von einer Social Media Plattform unterscheidbar sein. Eine Kommentarfunktion soll hierfür, neben der Bewertungsfunktion, Freiheiten für die kritische Auseinandersetzung mit den Sportstätten schaffen. Darüber hinaus bildet die App desweigen keine weiteren Social Media Content ab. Lediglich eine Verknüpfung mit den Channels der Hallen soll über Links erreicht werden können.",
+    "Schau dir gerne den ersten Prototypen an und ",
+    "erzähl mir",
+    " was du von dem Design hältst."
 ];
 
 placeholder = [
@@ -60,9 +77,17 @@ ariaLabels = [
 ];
 
 alts = [
-    "Dies ist mein Coverbild auf dem ich sehr nachdenklich schaue",
+    "Coverfoto auf dem ich sehr nachdenklich schaue",
+    "Kontakt link führt einen zum Kontaktformular nach unten",
     "Lade Johannes Lebenslauf herunter",
     "Dieses Mockup zeigt drei Iphones mit 3 Beispielscreens der App Ropeless vor einem unscharfen Hintergrund eines Pariser Boulderhalle",
+    "Video des Onboardings von Ropeless, dem Homescreen mit Neuigkeitenfenster, dem Suchprozess der App, der Detailseite einer Kletterhalle, dem eigenen und dem Profil eines Mitglieds der App.",
+    "Ropeless Logo - eine schwarze Figur mit grünem Chalkbag hängt einarmig an einer Boulderwand",
+    "Beispiele der low fidelity Wireframes vom Onboarding",
+    "Beispiele der high fidelity Wireframes von der Detailsansicht und dem persönlichen Profil",
+    "Der Styleguide von Ropeless mit Farben, Typographie, Komponenten, Eingabemedien, Bildern und Icons der App",
+    "Eine Hand hält ein iPhone mit dem Ropeless Ladebildschirm. Im Hintergrund eine Reisetasche auf einem Teppich, darauf eine zusammengefaltete Reisekarte, Kamera und daneben eine Trinkflasche",
+    "Die Ropeless Figur sitzt auf der Bouldermatte und schaut einem entgegen",
     "Verbinde dich auf Xing mit mir",
     "Folge mir auf Github",
     "Schick mir eine Email"
