@@ -36,7 +36,7 @@ texts = [
     "kontakt",
     "Die Suche hat ein Ende",
     "Ropeless",
-    "Im Laufe meiner Screendesign Weiterbildung im Februar lernte ich den erweiterten Umgang mit Sketch und setzte Designprinzipien des Material Designs und der User Interface Guidelines in Entwürfen um. Daraus entstand schließlich das App Design von Ropeless, einer Plattform für BoulderInnen, die sich mit Sporthallen in Europa vernetzten möchten.",
+    "Im Laufe meiner Screendesign Weiterbildung im Januar lernte ich den erweiterten Umgang mit Sketch und setzte Designprinzipien des Material Designs und der User Interface Guidelines in Entwürfen um. Daraus entstand schließlich das App Design von Ropeless, einer Plattform für BoulderInnen, die sich mit Sporthallen in Europa vernetzten möchten.",
     "Low Fidelity Wireframes vom Onboarding",
     "High Fidelity Wireframes des Detail und Profilscreens",
     "Mit Hilfe einer groben Konzeption, Scribbles und Wireframes rahmte ich meine Designentscheidungen für die Haupt-Screens und schließlich des Prototypen.",
