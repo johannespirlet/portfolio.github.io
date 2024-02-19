@@ -78,17 +78,16 @@ ariaLabels = [
 
 alts = [
     "Coverfoto auf dem ich sehr nachdenklich schaue",
-    "Kontakt link führt einen zum Kontaktformular nach unten",
+    "Kontaktlink führt zum Kontaktformular nach unten",
     "Lade Johannes Lebenslauf herunter",
     "Dieses Mockup zeigt drei Iphones mit 3 Beispielscreens der App Ropeless vor einem unscharfen Hintergrund eines Pariser Boulderhalle",
-    "Video des Onboardings von Ropeless, dem Homescreen mit Neuigkeitenfenster, dem Suchprozess der App, der Detailseite einer Kletterhalle, dem eigenen und dem Profil eines Mitglieds der App.",
+    "Verbinde dich auf Xing mit mir",
+    "Folge mir auf Github",
+    "Schick mir eine Email",
     "Ropeless Logo - eine schwarze Figur mit grünem Chalkbag hängt einarmig an einer Boulderwand",
     "Beispiele der low fidelity Wireframes vom Onboarding",
     "Beispiele der high fidelity Wireframes von der Detailsansicht und dem persönlichen Profil",
     "Der Styleguide von Ropeless mit Farben, Typographie, Komponenten, Eingabemedien, Bildern und Icons der App",
     "Eine Hand hält ein iPhone mit dem Ropeless Ladebildschirm. Im Hintergrund eine Reisetasche auf einem Teppich, darauf eine zusammengefaltete Reisekarte, Kamera und daneben eine Trinkflasche",
-    "Die Ropeless Figur sitzt auf der Bouldermatte und schaut einem entgegen",
-    "Verbinde dich auf Xing mit mir",
-    "Folge mir auf Github",
-    "Schick mir eine Email"
+    "Die Ropeless Figur sitzt auf der Bouldermatte und schaut einem entgegen"
 ];

@@ -118,8 +118,10 @@
                     <p lang></p>
                     <p lang></p>
                     <p lang></p>
-                    <a class="btn" href="./#contact" lang alt></a>
-                    <button onclick="window.open('./files/JP_Lebenslauf_DE.pdf')" class="btn" alt lang></button>
+                    <div class="button-container">
+                        <a class="btn" href="./#contact" lang alt></a>
+                        <button onclick="window.open('./files/JP_Lebenslauf_DE.pdf')" class="btn" alt lang></button>
+                    </div>
                 </div>
                 <div class="animatable bounceInRight">
                     <h2 lang></h2>
@@ -155,7 +157,7 @@
                         <h1 lang></h1>
                         <h2 lang></h2>
                         <p lang></p>
-                        <div>
+                        <div class="button-container">
                             <a id="ropeless" class="btn" lang tabindex="0"></a>
                             <button class="proto-btn btn">Prototype</button>                            
                         </div>
@@ -222,7 +224,7 @@
     <div class="dialog vid-dialog">
         <div class="dialog-close" tabindex="0"></div>
         <div id="vid-cropper">
-        <video autoplay loop alt>
+        <video loop muted playsinline>
             <source src="https://github.com/johannespirlet/portfolio.github.io/blob/main/vid/prototype.mp4?raw=true" type="video/mp4"></source>
         </video>
         </div>

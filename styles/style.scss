@@ -6,10 +6,13 @@
 
 @include devices (bigScreen) {
 
+    .button-container {
+        margin-top: 1rem;
+        @include flexCenter($direction: row);
+    }
+
     .btn {
-        display: block;
         width: 110px;
-        margin-inline: auto;
     }
 
     p, h1, h2, article > h3, .btn {
@@ -82,7 +85,13 @@
 
 @include devices (smallScreen) {
 
+    .btn {
+        margin-block: 1rem;
+    }
 
+    .button-container {
+        @include flexCenter($direction: column);
+    }
 
     .card-col:nth-child(2) {
         padding: 0;

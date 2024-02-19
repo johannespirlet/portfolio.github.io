@@ -125,7 +125,7 @@ li {
 }
 
 .card-col:nth-child(2) {
-    padding-left: 1.3rem;
+    padding-left: 2rem;
 }
 
 .success-message {
@@ -198,7 +198,7 @@ li {
         right: 2rem;
         @include box(2rem);
         background-color: $themecolor-orange;
-        background: url("../../img/icons/close.svg");
+        background: url("https://github.com/johannespirlet/portfolio.github.io/blob/main/img/icons/close.svg?raw=true");
         border-radius: 30%;
         cursor: pointer;
     }

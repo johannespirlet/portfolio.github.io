@@ -37,6 +37,8 @@ const image_of_mine = document.querySelector("#me");
 const projDialog = document.querySelector(".project-dialog");
 const vidDialog = document.querySelector(".vid-dialog");
 const dialogBg = document.querySelector("#dialog-bg");
+const video = document.querySelector("video");
+
 
 document.querySelector("#ropeless").addEventListener("click", () => {
     sm_fixed_nav.classList.add("slide-in-centered");
@@ -52,6 +54,7 @@ document.querySelectorAll(".dialog-close").forEach(node => {
         node.parentNode.style.visibility = "hidden";
         node.parentNode.style.opacity = 0;
         dialogBg.style.opacity = 1;
+        video.pause();
         enableScroll();
     });
 });
@@ -61,6 +64,7 @@ document.querySelectorAll(".proto-btn").forEach(node => {
         sm_fixed_nav.classList.add("slide-in-centered");
         vidDialog.style.visibility = "visible";
         vidDialog.style.opacity = 1;
+        video.play();
         if(dialogBg.style.opacity == 0.3) {
             projDialog.style.visibility = "hidden";
             projDialog.style.opacity = 0;

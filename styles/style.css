@@ -547,7 +547,7 @@ li {
 }
 
 .card-col:nth-child(2) {
-  padding-left: 1.3rem;
+  padding-left: 2rem;
 }
 
 .success-message {
@@ -620,7 +620,7 @@ li {
   width: 2rem;
   height: 2rem;
   background-color: rgb(255, 99, 71);
-  background: url("../../img/icons/close.svg");
+  background: url("https://github.com/johannespirlet/portfolio.github.io/blob/main/img/icons/close.svg?raw=true");
   border-radius: 30%;
   cursor: pointer;
 }
@@ -793,10 +793,15 @@ textarea:not([rows]) {
 }
 
 @media only screen and (max-width: 980px) {
+  .button-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
   .btn {
-    display: block;
     width: 110px;
-    margin-inline: auto;
   }
   p, h1, h2, article > h3, .btn {
     text-align: center;
@@ -861,6 +866,15 @@ textarea:not([rows]) {
   }
 }
 @media only screen and (max-width: 599px) {
+  .btn {
+    margin-block: 1rem;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .card-col:nth-child(2) {
     padding: 0;
   }
