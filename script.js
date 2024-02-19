@@ -73,6 +73,11 @@ document.querySelectorAll(".proto-btn").forEach(node => {
     });
 });
 
+document.querySelector("#CV-button").onclick = () => {
+
+    window.open(`./files/JP_Lebenslauf_${mySelect.value}.pdf`);
+};
+
 
 
 //Slide-In Event for fixed menu bar in case scroll top is beyond welcome-pic or bottom is beyond footer
