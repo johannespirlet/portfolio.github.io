@@ -29,17 +29,17 @@
     }
 
     .vid-dialog {
-        @include box(300px, 498px);
+        @include box(230px, 498px);
 
         .dialog-close {
             right: -5vw;
         }
     
         #vid-cropper{
-            @include box(300px, 498px);
+            @include box(230px, 497px);
 
             video {
-                margin-left: -292px;
+                margin-left: -328px;
                 @include box(auto, 500px);
             }
         }
@@ -68,13 +68,21 @@
         display: none;
     }
 
-    .card-col {
-        display: block;
-        width: 100%;
+    .project-card {
+        @include flexCenter($direction: column);
     }
 
+    .card-col {
+        display: block;
+    }
+
+    .card-col:nth-child(1) {
+        width: 100%;
+    }
+    
     .card-col:nth-child(2) {
-        padding: 1rem;
+        width: 100%;
+        padding: 1rem 2rem;
     }
 
     .about_sec {
@@ -93,8 +101,12 @@
         @include flexCenter($direction: column);
     }
 
-    .card-col:nth-child(2) {
+    .project-card {
         padding: 0;
+    }
+    
+    .card-col:nth-child(2) {
+        padding: 1rem;
     }
 
     .sec_container {

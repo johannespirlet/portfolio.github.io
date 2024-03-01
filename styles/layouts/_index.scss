@@ -103,6 +103,7 @@ li {
 }
 
 .project-card {
+    @include flexCenter($direction: row);
     background-color: $bg-greyish;
     padding: 1.3rem;
     margin-block: 1.5rem;
@@ -120,11 +121,14 @@ li {
 .card-col {
     @include flexCenter($direction: column);
     align-items: flex-start;
-    width: 50%;
-    float: left;
+}
+
+.card-col:nth-child(1) {
+    width: 45%;
 }
 
 .card-col:nth-child(2) {
+    width: 55%;
     padding-left: 2rem;
 }
 
@@ -237,22 +241,22 @@ li {
 
 .vid-dialog {
     z-index: 810;
-    @include box(20vw, auto);
+    @include box(22.2vw, auto);
     border: inherit;
 
     .dialog-close {
-        right: -5vw;
-        top: -1.5vh;
+        right: -3rem;
+        top: -0.5rem;
     }
 
     #vid-cropper{
         overflow: hidden;
         top: 50%;
-        width: 21.5vw;
+        width: 22.1vw;
  
         video {
-            width: 80vw;
-            margin-left: -29vw;
+            width: 83vw;
+            margin-left: -30.27vw;
         }
     }
 

@@ -57,14 +57,14 @@ a,
 
 article h3 {
   font: clamp(2.3rem, 4.5vw, 5rem) "DM Serif Display", serif;
-  color: rgb(255, 99, 71);
+  color: #ff6347;
 }
 article p:nth-child(1) {
   color: #333;
   font-size: clamp(0.9rem, 1.1vw, 1.4rem);
 }
 article a {
-  color: rgb(255, 99, 71) !important;
+  color: #ff6347 !important;
   font-weight: 600;
 }
 
@@ -102,7 +102,7 @@ main .btn {
 }
 #sidemenu a:hover,
 #sidemenu a:active {
-  color: rgb(255, 99, 71);
+  color: #ff6347;
 }
 
 #menu a {
@@ -176,7 +176,7 @@ main .btn {
 }
 
 .custom-select-container:focus-visible {
-  outline: 2px solid rgb(255, 99, 71);
+  outline: 2px solid #ff6347;
 }
 
 .custom-select-label {
@@ -205,7 +205,7 @@ main .btn {
   width: 0;
   border-left: 0.25rem solid transparent;
   border-right: 0.25rem solid transparent;
-  border-top: 0.25rem solid rgb(3, 3, 43);
+  border-top: 0.25rem solid #03032b;
 }
 
 .custom-select-list {
@@ -238,7 +238,7 @@ main .btn {
 
 .custom-select-option.selected {
   color: #fff;
-  background-color: rgb(3, 3, 43);
+  background-color: #03032b;
 }
 
 footer {
@@ -271,7 +271,7 @@ footer p {
   align-items: center;
   flex-direction: row;
   padding: 1.5svh 3.5%;
-  background-color: rgb(3, 3, 43);
+  background-color: #03032b;
 }
 #header_container #logo {
   width: 3rem;
@@ -292,7 +292,7 @@ footer p {
   color: white;
 }
 #header_container nav #menu a:hover {
-  color: rgb(255, 99, 71);
+  color: #ff6347;
 }
 #header_container nav .custom-select-label:before {
   content: "";
@@ -316,7 +316,7 @@ footer p {
   width: 12rem;
   height: 100%;
   z-index: 4;
-  background: rgb(3, 3, 43);
+  background: #03032b;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 #sidemenu > ul {
@@ -339,11 +339,11 @@ footer p {
   margin-top: 0.3rem;
   margin-bottom: 1rem;
   font-family: "Avenir Next", "Avenir", sans-serif;
-  caret-color: rgb(255, 99, 71);
+  caret-color: #ff6347;
 }
 
 .contact_form_input:focus {
-  outline: 1px groove rgb(255, 99, 71);
+  outline: 1px groove #ff6347;
   outline-offset: 1px;
 }
 
@@ -453,7 +453,7 @@ main h5 {
 }
 
 a:focus-visible a:not(.btn) {
-  outline: 1px solid rgb(255, 99, 71);
+  outline: 1px solid #ff6347;
 }
 
 li {
@@ -467,7 +467,7 @@ li {
 }
 
 #welcome {
-  background-color: rgb(3, 3, 43);
+  background-color: #03032b;
 }
 
 #welcome_wrapper {
@@ -523,6 +523,10 @@ li {
 }
 
 .project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background-color: rgba(212, 212, 212, 0.5);
   padding: 1.3rem;
   margin-block: 1.5rem;
@@ -542,11 +546,14 @@ li {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
-  float: left;
+}
+
+.card-col:nth-child(1) {
+  width: 45%;
 }
 
 .card-col:nth-child(2) {
+  width: 55%;
   padding-left: 2rem;
 }
 
@@ -601,7 +608,7 @@ li {
   -webkit-box-shadow: 2px 2px 15px -3px rgba(153, 153, 153, 0.2);
   box-shadow: 2px 2px 10px -4px rgba(153, 153, 153, 0.2);
   border: 1px solid hsla(0, 0%, 50%, 0.453);
-  border-left: 7vw solid rgb(3, 3, 43);
+  border-left: 7vw solid #03032b;
   opacity: 0;
   visibility: hidden;
   transition: visibility 0.2s ease-out 0.1s, opacity 0.1s ease-out;
@@ -619,7 +626,7 @@ li {
   right: 2rem;
   width: 2rem;
   height: 2rem;
-  background-color: rgb(255, 99, 71);
+  background-color: #ff6347;
   background: url("https://github.com/johannespirlet/portfolio.github.io/blob/main/img/icons/close.svg?raw=true");
   border-radius: 30%;
   cursor: pointer;
@@ -654,22 +661,22 @@ li {
 
 .vid-dialog {
   z-index: 810;
-  width: 20vw;
+  width: 22.2vw;
   height: auto;
   border: inherit;
 }
 .vid-dialog .dialog-close {
-  right: -5vw;
-  top: -1.5vh;
+  right: -3rem;
+  top: -0.5rem;
 }
 .vid-dialog #vid-cropper {
   overflow: hidden;
   top: 50%;
-  width: 21.5vw;
+  width: 22.1vw;
 }
 .vid-dialog #vid-cropper video {
-  width: 80vw;
-  margin-left: -29vw;
+  width: 83vw;
+  margin-left: -30.27vw;
 }
 
 .slide-in-centered {
@@ -814,18 +821,18 @@ textarea:not([rows]) {
     min-width: 100%;
   }
   .vid-dialog {
-    width: 300px;
+    width: 230px;
     height: 498px;
   }
   .vid-dialog .dialog-close {
     right: -5vw;
   }
   .vid-dialog #vid-cropper {
-    width: 300px;
-    height: 498px;
+    width: 230px;
+    height: 497px;
   }
   .vid-dialog #vid-cropper video {
-    margin-left: -292px;
+    margin-left: -328px;
     width: auto;
     height: 500px;
   }
@@ -851,12 +858,21 @@ textarea:not([rows]) {
   .scroll_down svg {
     display: none;
   }
+  .project-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .card-col {
     display: block;
+  }
+  .card-col:nth-child(1) {
     width: 100%;
   }
   .card-col:nth-child(2) {
-    padding: 1rem;
+    width: 100%;
+    padding: 1rem 2rem;
   }
   .about_sec {
     display: flex;
@@ -875,8 +891,11 @@ textarea:not([rows]) {
     align-items: center;
     flex-direction: column;
   }
-  .card-col:nth-child(2) {
+  .project-card {
     padding: 0;
+  }
+  .card-col:nth-child(2) {
+    padding: 1rem;
   }
   .sec_container {
     width: 95%;

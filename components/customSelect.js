@@ -48,7 +48,7 @@ function setup(select) {
     select.selectContainer.tabIndex = 0;
     select.selectContainer.ariaLabel = "";
     select.selectLabel.classList.add("custom-select-label");
-    select.selectLabel.innerText = select.selectedOption.label;
+    select.selectLabel.innerText = select.selectedOption.value;
 
     select.selectContainer.append(select.selectLabel);
 
